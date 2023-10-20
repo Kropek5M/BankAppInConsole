@@ -1,5 +1,5 @@
 UserData = {};
-UserData = {Haslo=nil,Login=nil,Pesel=nil,Datau=nil,Imie=nil,Nazw=nil,ID=math.random(0, 9999999999),StanKonta=math.random(10000, 10000000),NRKonta=0,KwotaPrzelewu=0,RodzajPrzelwu=0,datePattern="%d%d/%d%d/%d%d%d%d",currentTime=os.date("*t"),BankName="SanBank",LiniaGruba="=================================================\n",LiniaCieka="-------------------------------------------------\n"};
+UserData = {Haslo='0',Login='0',Pesel='0',Datau='0',Imie='0',Nazw='0',ID=math.random(0, 9999999999),StanKonta=math.random(10000, 10000000),NRKonta=0,KwotaPrzelewu=0,RodzajPrzelewu='0',datePattern="%d%d/%d%d/%d%d%d%d",currentTime=os.date("*t"),BankName="SanBank",LiniaGruba="=================================================\n",LiniaCieka="-------------------------------------------------\n"};
 function MenuGlowne()
 	print([[
         =================================================
@@ -60,11 +60,11 @@ function MenuGlowne()
 		if (tonumber(userInput) <= tonumber(UserData.StanKonta)) then
 			UserData.KwotaPrzelewu = userInput;
 			local userInput = readConsoleInput("Jaki rodzaj przelewu chcesz wykonać?\nZwykły - 1\nEkspresowy - 2\n");
-			UserData.RodzajPrzelwu = userInput;
-			if (tonumber(UserData.RodzajPrzelwu) == 1) then
-				UserData.RodzajPrzelwu = "Ekspresowy";
+			UserData.RodzajPrzelewu = userInput;
+			if (tonumber(UserData.RodzajPrzelewu) == 1) then
+				UserData.RodzajPrzelewu = "Standardowy";
 			else
-				UserData.RodzajPrzelwu = "Standardowy";
+				UserData.RodzajPrzelewu = "Ekspresowy";
 			end
 			print("Udało się wysłać przelew " .. UserData.RodzajPrzelewu .. " do " .. UserData.NRKonta .. " o wartości " .. UserData.KwotaPrzelewu .. " PLN.\nZa 5 sekund zostaniesz przeniesiony do menu głównego.");
 			UserData.StanKonta = UserData.StanKonta - UserData.KwotaPrzelewu;

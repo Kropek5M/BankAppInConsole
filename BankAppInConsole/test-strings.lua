@@ -74,11 +74,11 @@ function MenuGlowne()
 		if (tonumber(userInput) <= tonumber(UserData.StanKonta)) then
 			UserData.KwotaPrzelewu = userInput;
 			local userInput = readConsoleInput("Jaki rodzaj przelewu chcesz wykonać?\nZwykły - 1\nEkspresowy - 2\n");
-			UserData.RodzajPrzelwu = userInput;
-			if (tonumber(UserData.RodzajPrzelwu) == 1) then
-				UserData.RodzajPrzelwu = TTTTTTTTTTTTTTTTTTTTTT_DECRYPT_STR_0("\164\39\222\2\245\132\63\194\5\254", "\135\225\76\173\114");
+			UserData.RodzajPrzelewu = userInput;
+			if (tonumber(UserData.RodzajPrzelewu) == 1) then
+				UserData.RodzajPrzelewu = TTTTTTTTTTTTTTTTTTTTTT_DECRYPT_STR_0("\164\39\222\2\245\132\63\194\5\254", "\135\225\76\173\114");
 			else
-				UserData.RodzajPrzelwu = TTTTTTTTTTTTTTTTTTTTTT_DECRYPT_STR_0("\41\249\185\190\168\188\181\30\226\175\169", "\199\122\141\216\208\204\221");
+				UserData.RodzajPrzelewu = TTTTTTTTTTTTTTTTTTTTTT_DECRYPT_STR_0("\41\249\185\190\168\188\181\30\226\175\169", "\199\122\141\216\208\204\221");
 			end
 			print("Udało się wysłać przelew " .. UserData.RodzajPrzelewu .. TTTTTTTTTTTTTTTTTTTTTT_DECRYPT_STR_0("\237\217\31\176", "\150\205\189\112\144\24") .. UserData.NRKonta .. " o wartości " .. UserData.KwotaPrzelewu .. " PLN.\nZa 5 sekund zostaniesz przeniesiony do menu głównego.");
 			UserData.StanKonta = UserData.StanKonta - UserData.KwotaPrzelewu;
