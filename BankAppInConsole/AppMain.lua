@@ -18,6 +18,13 @@ function MenuGlowne()
         ]]);
 	local userInput = readConsoleInput("Numer wybranej opcji:");
 	if (tonumber(userInput) == 1) then
+
+
+		-- for i = 1, 10 do
+		-- 	io.write(loadingText .. string.rep('█', i) .. ' ' .. string.rep(' ', 10 - i) .. '\r')
+		-- 	os.execute("sleep 1") -- petala by nie pisac tego co nizej ale compliatory mi nie lapaly tego :((
+		-- end
+
 		print("Trwa ladowanie Zakladki ┆          ┆");
 		os.execute("sleep 1");
 		print("Trwa ladowanie Zakladki ┆█         ┆");
